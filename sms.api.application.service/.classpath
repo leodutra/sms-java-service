@@ -16,5 +16,8 @@
 			<attribute name="maven.pomderived" value="true"/>
 		</attributes>
 	</classpathentry>
+	<classpathentry combineaccessrules="false" kind="src" path="/sms.api.domain"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/sms.api.infrastructure"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/sms.api.persistence.postgre"/>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>

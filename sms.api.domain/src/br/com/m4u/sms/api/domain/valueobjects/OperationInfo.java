@@ -4,28 +4,38 @@ import java.util.ArrayList;
 import java.util.List;
 
 public abstract class OperationInfo {
-	private List<String> brokenRules = new ArrayList<String>(10);
 	
-	public boolean isValid() {
-		return getBrokenRules().size() == 0;
+	private List<String> errors = new ArrayList<String>(10);
+	
+	public boolean isSuccessful() {
+		return getErrors().size() == 0;
 	}
 	
-	public List<String> getBrokenRules() {
-		return new ArrayList<String>(brokenRules);
+	public List<String> getErrors() {
+		return new ArrayList<String>(errors);
 	}
 	
-	public void setBrokenRules(List<String> brokenRules) {
-		if (brokenRules != null) 
-			this.brokenRules = brokenRules;
+	public void setErrors(List<String> errors) {
+		if (errors != null) 
+			this.errors = errors;
 		else 
-			brokenRules = new ArrayList<String>();
+			errors = new ArrayList<String>();
 	}
 	
-	public void addBrokenRule(String brokenRule) {
-		brokenRules.add(brokenRule);
+	public void resetError(String error) {
+		errors.clear();
+		if (error != null) errors.add(error);
 	}
 	
-	public void addBrokenRule(OperationInfo operationInfo) {
-		brokenRules.addAll(operationInfo.getBrokenRules());
+	public void addError(String error) {
+		this.errors.add(error);
+	}
+	
+	public void addError(OperationInfo operationInfo) {
+		errors.addAll(operationInfo.getErrors());
 	} 
+	
+	public void clearErrors() {
+		errors.clear();
+	}
 }
