@@ -50,4 +50,5 @@ public class SmsMessage extends Entity<BigInteger> {
 	public String getBody() {
 		return body;
 	}
+	
 }

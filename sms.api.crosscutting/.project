@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <projectDescription>
-	<name>sms.api.infrastructure</name>
+	<name>sms.api.crosscutting</name>
 	<comment></comment>
 	<projects>
 	</projects>

@@ -1,41 +1,34 @@
-package br.com.m4u.sms.api.domain.valueobjects;
+package br.com.m4u.sms.api.domain.results;
 
-import java.util.ArrayList;
-import java.util.List;
+public class ResultError {
 
-public abstract class OperationInfo {
-	
-	private List<String> errors = new ArrayList<String>(10);
-	
-	public boolean isSuccessful() {
-		return getErrors().size() == 0;
+	private int messageCode;
+	private String message;
+
+	public ResultError() { }
+
+	public ResultError(String message) {
+		this.message = message;
 	}
 	
-	public List<String> getErrors() {
-		return new ArrayList<String>(errors);
+	public ResultError(int code, String message) {
+		this.messageCode = code;
+		this.message = message;
 	}
-	
-	public void setErrors(List<String> errors) {
-		if (errors != null) 
-			this.errors = errors;
-		else 
-			errors = new ArrayList<String>();
+
+	public int getMessageCode() {
+		return messageCode;
 	}
-	
-	public void resetError(String error) {
-		errors.clear();
-		if (error != null) errors.add(error);
+
+	public void setMessageCode(int messageCode) {
+		this.messageCode = messageCode;
 	}
-	
-	public void addError(String error) {
-		this.errors.add(error);
+
+	public String getMessage() {
+		return message;
 	}
-	
-	public void addError(OperationInfo operationInfo) {
-		errors.addAll(operationInfo.getErrors());
-	} 
-	
-	public void clearErrors() {
-		errors.clear();
+
+	public void setMessage(String message) {
+		this.message = message;
 	}
 }
