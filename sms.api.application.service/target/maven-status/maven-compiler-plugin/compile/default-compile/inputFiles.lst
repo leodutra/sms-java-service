@@ -1,0 +1,10 @@
+/home/home/git/sms-java-service/sms.api.application.service/src/br/com/m4u/sms/api/app/service/injection/SmsServiceProducer.java
+/home/home/git/sms-java-service/sms.api.application.service/src/test/integrated/br/com/m4u/api/app/service/StoriesRunner.java
+/home/home/git/sms-java-service/sms.api.application.service/src/br/com/m4u/sms/api/app/service/v1/endpoints/SmsEndpoint.java
+/home/home/git/sms-java-service/sms.api.application.service/src/test/integrated/br/com/m4u/api/app/service/steps/SendSmsSteps.java
+/home/home/git/sms-java-service/sms.api.application.service/src/br/com/m4u/sms/api/app/service/ResourcesConfig.java
+/home/home/git/sms-java-service/sms.api.application.service/src/br/com/m4u/sms/api/app/service/Application.java
+/home/home/git/sms-java-service/sms.api.application.service/src/br/com/m4u/sms/api/app/service/injection/UnitOfWorkProducer.java
+/home/home/git/sms-java-service/sms.api.application.service/src/br/com/m4u/sms/api/app/service/v1/contracts/Result.java
+/home/home/git/sms-java-service/sms.api.application.service/src/br/com/m4u/sms/api/app/service/JsonObjectMapper.java
+/home/home/git/sms-java-service/sms.api.application.service/src/br/com/m4u/sms/api/app/service/v1/contracts/SendSmsRequest.java

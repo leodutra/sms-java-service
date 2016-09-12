@@ -14,7 +14,7 @@ so that we do not have to implement a complex integration service ourselves.
 Scenario: SMS is sent and stored in database
 
 Given a valid SMS message
-When I send a POST SMS request on "/sms"
+When SMS message is sent
 Then ensure SMS is returned with id
 And ensure SMS is stored in the database
 

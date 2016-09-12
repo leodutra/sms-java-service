@@ -1,0 +1,14 @@
+/home/home/git/sms-java-service/sms.api.domain/src/br/com/m4u/sms/api/domain/services/SmsMessageServiceImpl.java
+/home/home/git/sms-java-service/sms.api.domain/src/br/com/m4u/sms/api/domain/entities/SmsMessage.java
+/home/home/git/sms-java-service/sms.api.domain/src/br/com/m4u/sms/api/domain/validators/SmsMessageValidator.java
+/home/home/git/sms-java-service/sms.api.domain/src/br/com/m4u/sms/api/domain/persistence/SmsMessageRepository.java
+/home/home/git/sms-java-service/sms.api.domain/src/br/com/m4u/sms/api/domain/results/ResultTypeEnum.java
+/home/home/git/sms-java-service/sms.api.domain/src/br/com/m4u/sms/api/domain/services/SmsMessageService.java
+/home/home/git/sms-java-service/sms.api.domain/src/br/com/m4u/sms/api/domain/results/ResultErrorFactory.java
+/home/home/git/sms-java-service/sms.api.domain/src/br/com/m4u/sms/api/domain/entities/Entity.java
+/home/home/git/sms-java-service/sms.api.domain/src/br/com/m4u/sms/api/domain/validators/Validator.java
+/home/home/git/sms-java-service/sms.api.domain/src/br/com/m4u/sms/api/domain/results/Result.java
+/home/home/git/sms-java-service/sms.api.domain/src/br/com/m4u/sms/api/domain/results/ResultError.java
+/home/home/git/sms-java-service/sms.api.domain/src/br/com/m4u/sms/api/domain/persistence/Repository.java
+/home/home/git/sms-java-service/sms.api.domain/src/br/com/m4u/sms/api/domain/validators/AbstractValidator.java
+/home/home/git/sms-java-service/sms.api.domain/src/br/com/m4u/sms/api/domain/persistence/UnitOfWork.java

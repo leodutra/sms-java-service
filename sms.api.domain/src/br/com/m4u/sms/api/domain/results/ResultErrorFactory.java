@@ -16,17 +16,17 @@ public class ResultErrorFactory {
 			
 			properties.load(Thread.currentThread().getContextClassLoader().getResourceAsStream("META-INF/errors.properties"));
 			
-			String[] splitted = properties.getProperty(messagePropertyKey).split(SPLIT_PATTERN);
+			String[] splittedPropMsg = properties.getProperty(messagePropertyKey).split(SPLIT_PATTERN);
 			
-			if (splitted.length > 1) {
+			if (splittedPropMsg.length > 1) {
 				
-				int code = Integer.parseInt(splitted[0].trim());
-				String message = splitted[1].trim();
+				int code = Integer.parseInt(splittedPropMsg[0].trim());
+				String message = splittedPropMsg[1].trim();
 				
 				return new ResultError(code, message);
 			}
 			else {
-				return new ResultError(splitted[0].trim());
+				return new ResultError(splittedPropMsg[0].trim());
 			}
 			
 		} catch (Exception ex) {	

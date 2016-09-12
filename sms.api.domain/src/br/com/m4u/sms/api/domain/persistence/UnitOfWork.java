@@ -2,9 +2,9 @@ package br.com.m4u.sms.api.domain.persistence;
 
 import br.com.m4u.sms.api.exceptions.IntegrationException;
 
-public interface IUnitOfWork extends AutoCloseable {
+public interface UnitOfWork extends AutoCloseable {
 
-	ISmsMessageRepository smsMessageRepository();
+	SmsMessageRepository smsMessageRepository();
 	
 	void commit() throws IntegrationException;
 }

@@ -5,6 +5,7 @@ import static io.undertow.servlet.Servlets.servlet;
 import javax.servlet.ServletException;
 
 import org.glassfish.jersey.servlet.ServletContainer;
+import org.glassfish.jersey.servlet.ServletProperties;
 import org.jboss.weld.environment.servlet.Listener;
 
 import io.undertow.Handlers;
@@ -35,7 +36,8 @@ public class Application extends javax.ws.rs.core.Application {
 			    .setDeploymentName("sms-api.war")
 			    .addServlets(servlet("SmsJerseyServlet", ServletContainer.class)
 			            .setLoadOnStartup(1)
-			            .addInitParam("javax.ws.rs.Application", ResourcesConfig.class.getName())
+			            //.setAsyncSupported(true)
+			            .addInitParam(ServletProperties.JAXRS_APPLICATION_CLASS, ResourcesConfig.class.getName())
 			            .addMapping("/api/*"))
 			    		.addListener(Servlets.listener(Listener.class)); 
 

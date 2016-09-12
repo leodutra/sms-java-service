@@ -3,20 +3,19 @@ package br.com.m4u.sms.api.domain.results;
 import java.util.ArrayList;
 import java.util.List;
 
-public final class Result<TData> {
+public class Result<TData> {
 
 	private ResultTypeEnum resultType;
 	private TData data;
 	private List<ResultError> errors = new ArrayList<ResultError>();
 
-	
-	public static <TData> Builder<TData> build(ResultTypeEnum resultType) {
+	public static <TData> Builder<TData> getBuilder(ResultTypeEnum resultType) {
 		return new Builder<TData>(resultType);
 	}
 	
 	public Result() { }
 
-//  BUILDER PATTERN RESOLVES THIS...
+//  BUILDER PATTERN RESOLVES THE CONSTRUCTOR HELL
 //	
 //	public Result(ResultTypeEnum resultType, ResultError error) {
 //		setResultType(resultType);
@@ -76,24 +75,12 @@ public final class Result<TData> {
 		return new ArrayList<ResultError>(errors);
 	}
 
-	public void setErrors(List<ResultError> error) {
-		if (error != null)
-			this.errors = error;
-		else
-			error = new ArrayList<ResultError>();
-	}
-
-	public void setError(ResultError error) {
-		errors = new ArrayList<ResultError>();
-		if (error != null) errors.add(error);
-	}
-
 	public void addError(ResultError error) {
 		this.errors.add(error);
 	}
 
 	public void addErrors(List<ResultError> errors) {
-		errors.addAll(errors);
+		this.errors.addAll(errors);
 	}
 
 	public void clearErrors() {
@@ -101,23 +88,38 @@ public final class Result<TData> {
 	}
 	
 	public static class Builder<TData> {
-		private Result<TData> built = new Result<TData>();
+		private Result<TData> built;
+		
 		
 		public Builder(ResultTypeEnum resultType) {
+			buildNew();
 			built.setResultType(resultType);
+		}
+		
+		public void buildNew() {
+			built = new Result<TData>();
 		}
 		
 		public Result<TData> result() {
 			return built;
 		}
 		
+		public Builder<TData> error(String errorMsg) {
+			return error(new ResultError(errorMsg));
+		}
+		
 		public Builder<TData> error(ResultError error) {
-			built.setError(error);
+			built.addError(error);
 			return this;
 		}
 		
 		public Builder<TData> errors(List<ResultError> errors) {
-			built.setErrors(errors);
+			built.addErrors(errors);
+			return this;
+		}
+		
+		public Builder<TData> clearErrors() {
+			built.clearErrors();
 			return this;
 		}
 		
