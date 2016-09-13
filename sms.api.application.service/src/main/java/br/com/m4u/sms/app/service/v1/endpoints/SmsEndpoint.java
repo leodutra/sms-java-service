@@ -4,6 +4,7 @@ import static javax.ws.rs.core.Response.created;
 
 import java.net.URI;
 
+import javax.inject.Inject;
 import javax.ws.rs.Consumes;
 import javax.ws.rs.GET;
 import javax.ws.rs.POST;
@@ -22,16 +23,15 @@ import br.com.m4u.sms.domain.results.ResultTypeEnum;
 import br.com.m4u.sms.domain.services.SmsMessageServiceImpl;
 import br.com.m4u.sms.logging.Logger;
 import br.com.m4u.sms.service.agents.smsagent.SmsServiceAgent;
-import br.com.m4u.sms.service.agents.smsagent.SmsServiceAgentImpl;
 
 @Path("/v1/sms")
 public class SmsEndpoint {
 
 
-	//@Inject @Preferred 
+	@Inject
 	private UnitOfWork unitOfWork;
 	
-	//@Inject @Preferred
+	@Inject 
 	private SmsServiceAgent smsServiceAgent;
 	
 	@Context
@@ -42,9 +42,7 @@ public class SmsEndpoint {
 	@Produces(MediaType.APPLICATION_JSON)
 	public Response send(SendSmsRequest sendSmsRequest) {
 
-		try (UnitOfWork unitOfWork = new br.com.m4u.sms.persistence.postgre.PostgreUnitOfWork()){
-			smsServiceAgent = new SmsServiceAgentImpl();
-		//try {
+		try {
 		
 			Result<SmsMessage> resultEnvelop = new SmsMessageServiceImpl(unitOfWork, smsServiceAgent).sendStoringSmsMessage(convertToSmsMessage(sendSmsRequest));
 
