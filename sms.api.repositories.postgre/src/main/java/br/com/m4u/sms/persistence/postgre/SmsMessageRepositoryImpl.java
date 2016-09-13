@@ -14,13 +14,18 @@ import jodd.db.DbQuery;
 public class SmsMessageRepositoryImpl extends BaseRepository implements SmsMessageRepository {
 
 	private static RowMapper<SmsMessage> smsMessageMapper = (ResultSet rs, int rowNum) -> {
+
 		SmsMessage entity = new SmsMessage();
+		
+		entity.setId(rs.getLong("id"));
 		entity.setBody(rs.getString("body"));
 		entity.setRegistrationTime(rs.getTimestamp("registered_on").toInstant());
 		entity.setReceiverInformation(rs.getString("receiver_info"));
 		entity.setSenderInformation(rs.getString("sender_info"));
-		entity.setExpirationTime(rs.getTimestamp("expires_on").toInstant());
-		return null;
+		
+		final Timestamp expirationTime = rs.getTimestamp("expires_on");
+		if (expirationTime != null) entity.setExpirationTime(expirationTime.toInstant());
+		return entity;
 	};
 
 	public SmsMessageRepositoryImpl(Connection dbConnection) {

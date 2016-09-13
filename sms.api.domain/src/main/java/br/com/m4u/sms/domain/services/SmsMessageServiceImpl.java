@@ -16,7 +16,7 @@ import br.com.m4u.sms.service.agents.smsagent.SmsServiceAgentImpl;
 import br.com.m4u.sms.service.agents.smsagent.contracts.SendSmsRequest;
 import br.com.m4u.sms.service.agents.smsagent.contracts.SendSmsResponse;
 
-public final class SmsMessageServiceImpl implements SmsMessageServiceTest {
+public final class SmsMessageServiceImpl implements SmsMessageService {
 
 	private UnitOfWork unitOfWork;
 	private SmsServiceAgent smsServiceAgent;
@@ -47,10 +47,10 @@ public final class SmsMessageServiceImpl implements SmsMessageServiceTest {
 			SmsMessage insertedSms = unitOfWork.smsMessageRepository().insert(sms);
 
 			// Validate expiration date (stored for auditing)
-			ResultError expiredError = smsMessageValidator.validateExpirationDateOnly(insertedSms);
-			if (expiredError != null) {
-				return Result.<SmsMessage>getBuilder(ResultTypeEnum.VALIDATION_ERROR).error(expiredError).data(sms).result();
-			}
+			List<ResultError> expirationDetails = smsMessageValidator.validateExpirationOnly(insertedSms);
+			if (expirationDetails.isEmpty() == false) 
+				return Result.<SmsMessage>getBuilder(ResultTypeEnum.VALIDATION_ERROR).errors(expirationDetails).data(sms).result();
+			
 
 			// Send SMS
 			SendSmsResponse agentResponse = smsServiceAgent.sendSms(convertSmsToSend(insertedSms));

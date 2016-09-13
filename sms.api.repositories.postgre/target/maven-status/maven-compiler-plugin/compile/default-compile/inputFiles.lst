@@ -1,3 +1,4 @@
-/home/home/git/sms-java-service/sms.api.repositories.postgre/src/br/com/m4u/sms/api/persistence/postgre/UnitOfWorkImpl.java
-/home/home/git/sms-java-service/sms.api.repositories.postgre/src/br/com/m4u/sms/api/persistence/postgre/SmsMessageRepositoryImpl.java
-/home/home/git/sms-java-service/sms.api.repositories.postgre/src/br/com/m4u/sms/api/persistence/postgre/BaseRepository.java
+/home/home/git/sms-java-service/sms.api.repositories.postgre/src/test/java/br/com/m4u/sms/persistence/postgre/SmsMessageRepositoryTest.java
+/home/home/git/sms-java-service/sms.api.repositories.postgre/src/main/java/br/com/m4u/sms/persistence/postgre/BaseRepository.java
+/home/home/git/sms-java-service/sms.api.repositories.postgre/src/main/java/br/com/m4u/sms/persistence/postgre/SmsMessageRepositoryImpl.java
+/home/home/git/sms-java-service/sms.api.repositories.postgre/src/main/java/br/com/m4u/sms/persistence/postgre/PostgreUnitOfWork.java

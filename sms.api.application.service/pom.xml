@@ -1,7 +1,7 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
-	<groupId>sms.api.application.service</groupId>
+	<groupId>sms.api</groupId>
 	<artifactId>sms.api.application.service</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<build>
@@ -68,5 +68,20 @@
 			<version>4.0.5</version>
 		</dependency>
 
+		<dependency>
+			<groupId>sms.api</groupId>
+			<artifactId>sms.api.domain</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
+		<dependency>
+			<groupId>sms.api</groupId>
+			<artifactId>sms.api.crosscutting</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
+		<dependency>
+			<groupId>sms.api</groupId>
+			<artifactId>sms.api.persistence.postgre</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
 	</dependencies>
 </project>

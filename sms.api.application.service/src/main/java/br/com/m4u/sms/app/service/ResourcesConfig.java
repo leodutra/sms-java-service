@@ -8,8 +8,8 @@ import org.glassfish.jersey.server.ResourceConfig;
 @ApplicationPath("/api/*")
 public class ResourcesConfig extends ResourceConfig {  
     public ResourcesConfig() {
-        packages(true, "br.com.m4u.sms.api.app.service");
-
+       // packages(true, ResourcesConfig.class.getPackage().getName()); // 
+    	packages(true, "br.com.m4u.sms.app.service");
         register(JsonObjectMapper.class);
         register(JacksonFeature.class);
     }

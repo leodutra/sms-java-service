@@ -1,6 +1,5 @@
 package br.com.m4u.sms.domain.entities;
 
-import java.math.BigInteger;
 import java.time.Instant;
 
 public class SmsMessage extends Entity<Long> {
