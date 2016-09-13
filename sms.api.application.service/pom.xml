@@ -74,6 +74,12 @@
 		</dependency>
 
 		<dependency>
+			<groupId>org.hamcrest</groupId>
+			<artifactId>hamcrest-all</artifactId>
+			<version>1.3</version>
+		</dependency>
+		
+		<dependency>
 			<groupId>sms.api</groupId>
 			<artifactId>sms.api.domain</artifactId>
 			<version>0.0.1-SNAPSHOT</version>
@@ -83,6 +89,7 @@
 			<artifactId>sms.api.crosscutting</artifactId>
 			<version>0.0.1-SNAPSHOT</version>
 		</dependency>
+		
 		<dependency>
 			<groupId>sms.api</groupId>
 			<artifactId>sms.api.persistence.postgre</artifactId>
