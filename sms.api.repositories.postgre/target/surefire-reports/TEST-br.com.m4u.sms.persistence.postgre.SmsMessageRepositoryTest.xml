@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="1" failures="0" name="br.com.m4u.sms.persistence.postgre.SmsMessageRepositoryTest" time="0.161" errors="0" skipped="0">
+<testsuite tests="1" failures="0" name="br.com.m4u.sms.persistence.postgre.SmsMessageRepositoryTest" time="0.125" errors="0" skipped="0">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="sun.boot.library.path" value="/usr/lib/jvm/java-8-oracle/jre/lib/amd64"/>
@@ -26,7 +26,7 @@
 "/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="os.name" value="Linux"/>
-    <property name="classworlds.conf" value="/home/home/workspaces/eclipse/.metadata/.plugins/org.eclipse.m2e.launching/launches/m2conf5849288509503658109.tmp"/>
+    <property name="classworlds.conf" value="/home/home/workspaces/eclipse/.metadata/.plugins/org.eclipse.m2e.launching/launches/m2conf1292798062979362694.tmp"/>
     <property name="sun.jnu.encoding" value="UTF-8"/>
     <property name="java.library.path" value="/usr/java/packages/lib/amd64:/usr/lib64:/lib64:/lib:/usr/lib"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
@@ -62,5 +62,5 @@
     <property name="sun.desktop" value="gnome"/>
     <property name="sun.cpu.isalist" value=""/>
   </properties>
-  <testcase classname="br.com.m4u.sms.persistence.postgre.SmsMessageRepositoryTest" name="writeReadRepositoryData" time="0.161"/>
+  <testcase classname="br.com.m4u.sms.persistence.postgre.SmsMessageRepositoryTest" name="writeReadRepositoryData" time="0.125"/>
 </testsuite>

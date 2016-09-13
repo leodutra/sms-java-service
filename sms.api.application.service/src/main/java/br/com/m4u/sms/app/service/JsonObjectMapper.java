@@ -9,7 +9,7 @@ import com.fasterxml.jackson.databind.SerializationFeature;
 @Provider
 public class JsonObjectMapper implements ContextResolver<ObjectMapper> {
  
-	private final ObjectMapper defaultObjectMapper;
+	private ObjectMapper defaultObjectMapper;
 
     public JsonObjectMapper() {
         defaultObjectMapper = createDefaultMapper();

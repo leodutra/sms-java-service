@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="6" failures="0" name="br.com.m4u.sms.domain.services.SmsMessageValidatorTest" time="0.02" errors="0" skipped="0">
+<testsuite tests="6" failures="0" name="br.com.m4u.sms.domain.services.SmsMessageValidatorTest" time="0.019" errors="0" skipped="0">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="sun.boot.library.path" value="/usr/lib/jvm/java-8-oracle/jre/lib/amd64"/>
@@ -26,7 +26,7 @@
 "/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="os.name" value="Linux"/>
-    <property name="classworlds.conf" value="/home/home/workspaces/eclipse/.metadata/.plugins/org.eclipse.m2e.launching/launches/m2conf8873618387130106349.tmp"/>
+    <property name="classworlds.conf" value="/home/home/workspaces/eclipse/.metadata/.plugins/org.eclipse.m2e.launching/launches/m2conf5621156291916486251.tmp"/>
     <property name="sun.jnu.encoding" value="UTF-8"/>
     <property name="java.library.path" value="/usr/java/packages/lib/amd64:/usr/lib64:/lib64:/lib:/usr/lib"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
@@ -64,8 +64,8 @@
   </properties>
   <testcase classname="br.com.m4u.sms.domain.services.SmsMessageValidatorTest" name="invalidReceiver" time="0.015"/>
   <testcase classname="br.com.m4u.sms.domain.services.SmsMessageValidatorTest" name="invalidRegistrationTime" time="0"/>
-  <testcase classname="br.com.m4u.sms.domain.services.SmsMessageValidatorTest" name="invalidSender" time="0.003"/>
-  <testcase classname="br.com.m4u.sms.domain.services.SmsMessageValidatorTest" name="invalidBody" time="0"/>
+  <testcase classname="br.com.m4u.sms.domain.services.SmsMessageValidatorTest" name="invalidSender" time="0.001"/>
+  <testcase classname="br.com.m4u.sms.domain.services.SmsMessageValidatorTest" name="invalidBody" time="0.002"/>
   <testcase classname="br.com.m4u.sms.domain.services.SmsMessageValidatorTest" name="invalidExpirationTime" time="0.001"/>
-  <testcase classname="br.com.m4u.sms.domain.services.SmsMessageValidatorTest" name="allValid" time="0.001"/>
+  <testcase classname="br.com.m4u.sms.domain.services.SmsMessageValidatorTest" name="allValid" time="0"/>
 </testsuite>
